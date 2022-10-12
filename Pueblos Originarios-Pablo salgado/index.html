@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<!--Establecemos etiquetas de configuración como las de "meta charset y name" y enlaces a nustro archivo de estilos, fuentes e iconos que estaremos usando en la página-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilos.css">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="img/favicon.png">
+<!--Escribimos el título-->
+        <title>Pueblos Originarios</title>
+</head>
+<body>
+<!-- Empezamos el encabezado dónde irán el Logo de la página junto con el menú -->
+       <header>
+           <!-- Creamos un div con la clase contenedor para editar este en css y así agregar los espaciados en los margenes -->
+              <div class="contenedor">
+<!-- Al hacer el logo  con texto lo hacemos con un "h2" y le asignamos una clase para así poder darle diseño en css -->
+<div class="text">
+    <span style="--l: 'P';">P</span>
+    <span style="--l: 'u';">U</span>
+    <span style="--l: 'e';">E</span>
+    <span style="--l: 'b';">b</span>
+    <span style="--l: 'l';">L</span>
+    <span style="--l: 'o';">O</span>
+    <span style="--l: 's';">S</span>
+    <span style="--l: 's';"></span>
+    <span style="--l: 'P';">O</span>
+    <span style="--l: 'u';">R</span>
+    <span style="--l: 'e';">I</span>
+    <span style="--l: 'b';">G</span>
+    <span style="--l: 'l';">I</span>
+    <span style="--l: 'o';">N</span>
+    <span style="--l: 's';">A</span>
+    <span style="--l: 'P';">R</span>
+    <span style="--l: 'u';">I</span>
+    <span style="--l: 'e';">O</span>
+    <span style="--l: 'b';">S</span>
+</div>          
+<!-- Utilizamos un nav para la creación del menú de navegación -->
+        <nav>
+            <ul class="menu-horizontal">
+                <li><a href="#" class="active">Inicio</a></li>
+
+                <li><a href="#">Pueblos</a>
+                  <ul class="menu-vertical">
+                      <li><a href="Mapuches.html">Mapuches</a></li>
+                      <li><a href="Kollas.html">Kollas</a></li>
+                      <li><a href="toba.html">Toba</a></li>
+                      <li><a href="wichis.html">Wichi</a></li>
+                  </ul>
+              </li>
+      </ul>
+        </nav>
+    </div>
+</header>
+<!--usamos la etiqueta main para el contenido principal de nuestro body-->
+<main>
+    <div class="pelicula-principal">
+        <!-- Para aplicar los mismos márgenes que arriba simplemente encerramos el título y la descripción dentro del contenedor ya creado -->
+         <div class="contenedor">
+                <h3 class="titulo">Pueblos Originarios</h3>
+                <p class="descripcion">
+                    Hace mención a los pueblos que existieron y poblaron diferentes lugares del mundo antes de la Conquista. No se refiere solamente a los pueblos de América. Indígenas: En 1492, Colón creyó llegar a las “Indias”, por lo que denominó indios a los/as habitantes del continente americano.
+                </p>
+                <!-- creamos los dos botones: de "Reproducir" y de "Más Información y les asignamos una clase para añadirles diseño en css y además les añadimos un icono a cada uno" -->
+    <button role="button" class="boton"><a href="https://www.cultura.gob.ar/aborigenes-indigenas-originarios-a-que-refiere-cada-termino_6293/#:~:text=Pueblo%20originario%3A%20Hace%20menci%C3%B3n%20a,as%20habitantes%20del%20continente%20americano."><i class="fas fa-info-circle"></i>Más Información</a></button>
+     </div>
+</div>
+<!-- Para agregar los mismos margenes que teniamos anteriormente ponemos la clase de contenedor-->
+<div class="peliculas-recomendadas contenedor">
+    <!-- dentro del contenedor anterior creamos otro que abarque el título y indicadores -->
+<div class="contenedor-titulo-controles">
+    <!-- Ponemos el título de Películas Recomendadas -->
+    <h3>Imagenes</h3>
+    <!-- Creamos un div para los indicadores y le asignamos dicha clase -->
+    <div class="indicadores"></div>
+</div>
+<!-- Creamos un contenedor principal que abarque las flechas y el carousel -->
+<div class="contenedor-principal">
+<button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+
+<!-- Dentro del contenedor principal creamos el contenedor-carousel el cuál va a ser el que delimite de dónde a dónde va a ser el carousel -->
+<div class="contenedor-carousel">
+    <!-- Dentro del carousel ya van a estar las películas -->
+    <div class="carousel">
+<!-- creamos la clase película y le insertamos un link y la imagen de la película-->
+        <div class="pelicula">
+            <a href="#"><img src="img/1.jpg"></a>
+        </div>
+
+        <div class="pelicula">
+            <a href="#"><img src="img/2.jpg"></a>
+        </div>
+
+        <div class="pelicula">
+            <a href="#"><img src="img/3.jpg"></a>
+        </div>
+
+        <div class="pelicula">
+            <a href="#"><img src="img/4.jpg"></a>
+        </div>
+
+        <div class="pelicula">
+            <a href="#"><img src="img/5.jpg"></a>
+        </div>
+
+        <div class="pelicula">
+            <a href="#"><img src="img/1.jpg"></a>
+        </div>
+
+        <div class="pelicula">
+            <a href="#"><img src="img/2.jpg"></a>
+        </div>
+
+        <div class="pelicula">
+            <a href="#"><img src="img/3.jpg"></a>
+        </div>
+
+        <div class="pelicula">
+            <a href="#"><img src="img/4.jpg"></a>
+        </div>
+
+        <div class="pelicula">
+            <a href="#"><img src="img/5.jpg"></a>
+        </div>
+        <div class="pelicula">
+            <a href="#"><img src="img/1.jpg"></a>
+        </div>
+
+        <div class="pelicula">
+            <a href="#"><img src="img/2.jpg"></a>
+        </div>
+
+        <div class="pelicula">
+            <a href="#"><img src="img/3.jpg"></a>
+        </div>
+
+        <div class="pelicula">
+            <a href="#"><img src="img/4.jpg"></a>
+        </div>
+
+        <div class="pelicula">
+            <a href="#"><img src="img/5.jpg"></a>
+        </div>
+
+        <div class="pelicula">
+            <a href="#"><img src="img/1.jpg"></a>
+        </div>
+
+        <div class="pelicula">
+            <a href="#"><img src="img/2.jpg"></a>
+        </div>
+
+        <div class="pelicula">
+            <a href="#"><img src="img/3.jpg"></a>
+        </div>
+
+        <div class="pelicula">
+            <a href="#"><img src="img/4.jpg"></a>
+        </div>
+
+        <div class="pelicula">
+            <a href="#"><img src="img/5.jpg"></a>
+        </div>
+    </div>
+</div>
+<!-- Botón de flecha derecha -->
+<button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+</div>
+</main>
+
+ <!-- Escribimos el enlace a Fontaso para poder trabajar con íconos y el enlace a nustro archivo de js -->
+
+        <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

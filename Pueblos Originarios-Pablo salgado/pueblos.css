@@ -1,0 +1,243 @@
+/* Definimos 2 variables de colores los cuales usaremos a lo largo del documento */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Rye&family=Silkscreen&family=Syncopate:wght@700&display=swap');
+:root {
+    --rojo: #e50914; 
+    --fondo: #141414; 
+}
+/* Agregamos un selector universal para decirle a css que todos los elementos de mi página tengan un margin de 0, un padding de 0 y un box-sizing de tipo border-box*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Accedemos al body y decimos que tenga el fondo de la variable --fondo (la cuál establecimos que almacena un color negro)*/
+body {
+    background: -webkit-radial-gradient(#751faa, #0a0011);
+    /* Ponemos que el tipo de fuente para el body sea la 'Open Sans' */
+    font-family: 'Open Sans', sans-serif;
+    min-height: 100vh;
+    justify-content: center;
+    
+}
+/* Editamos el contenedor del header asignandole un ancho del 90% por ende 10% menos del total (5% menos de izquierda y derecha) y un margin auto para así crear los espaciados entre los elementos y el borde*/
+.contenedor {
+    width: 90%;
+    margin: auto;
+}
+/* ya teniendo los espaciados de izquierda y derecha usamos un 'padding' y le decimos q sea de 30px para generar ese espaciado vertical, como de los espacios horizontales no nos interesa lo dejamos en 0 */
+header {
+    padding: 30px 0;
+}
+/* Editamos el contenedor ya creado y le asignamos un display de tipo flex y un justify-content de tipo 'space-between' para poder poner el logo a la izquierda y menú a la derecha */
+header .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Accedemos a los enlaces que tenemos en el nav (menú de navegación) y le decimos que todos tengan un color gris casi blanco, con el text-decoration: none le quitamos los subrayados y ponemos un margen a la derecha de 20px entre cada uno de los elementos */
+header nav a {
+    color: #AAA;
+    text-decoration: none;
+    margin-right: 20px;
+}
+/* Accedemos al nav y decimos que cuando tenga su estado hover o cuándo tenga la clase 'active' cambie a un color completamente blanco */
+header nav a:hover,
+header nav a.active {
+    color: #dd3137;
+}
+
+.text{
+    max-width: 400PX;
+    display: flex;
+    margin: auto;
+}
+.text span{
+    font-size: 10pt;
+    font-weight: bold;
+    position: relative;
+    font-family: "Fredoka one";
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    
+}
+.text span::before{
+    content: var(--l);
+    position: absolute;
+    transform: scale(1.1);
+    filter:blur(15px);
+}
+.text span::after{
+    content: var(--l);
+    position:absolute;
+    top: 80%;
+    left: 0;
+    filter: blur(30px);
+    transform:rotateX(50deg);
+}
+.text span:hover{
+    filter:contrast(250%);
+}
+
+.text span:nth-child(1){
+    color: #feed01;
+}
+
+.text span:nth-child(2){
+    color: #ef6a01;
+}
+
+.text span:nth-child(3){
+    color: #e31e25;
+}
+
+.text span:nth-child(4){
+    color: #7d71b1;
+}
+
+.text span:nth-child(5){
+    color: #01a0e2;
+}
+
+.text span:nth-child(6){
+    color: #0d9543;
+}
+
+.text span:nth-child(7){
+    color: #fff;
+}
+
+.text span:nth-child(8){
+    color: #feed01;
+}
+
+.text span:nth-child(9){
+    color: #ef6a01;
+}
+
+.text span:nth-child(10){
+    color: #e31e25;
+}
+
+.text span:nth-child(11){
+    color: #7d71b1;
+}
+
+.text span:nth-child(12){
+    color: #01a0e2;
+}
+
+.text span:nth-child(13){
+    color: #0d9543;
+}
+
+.text span:nth-child(14){
+    color: #fff;
+}
+
+.text span:nth-child(15){
+    color: #feed01;
+}
+
+.text span:nth-child(16){
+    color: #ef6a01;
+}
+
+.text span:nth-child(17){
+    color: #e31e25;
+}
+
+.text span:nth-child(18){
+    color: #7d71b1;
+}
+
+.text span:nth-child(19){
+    color: #feed01;
+}
+
+.text span{
+    display: flex;
+    width: 500px;
+    justify-content: center;
+}
+
+
+.menu-horizontal{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .menu-horizontal > li > a{
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+  }
+  
+  .menu-vertical{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgba(0, 0, 0, .5);
+    color:#000;
+  }
+  
+  .menu-horizontal li:hover .menu-vertical{
+    display: block;
+  }
+  
+  .menu-vertical li:hover{
+    background-color: #751faa;
+  }
+
+  .conteiner{
+    border: 2px solid white;
+    box-shadow: inset 0 0 5px red, 0 0 10px red ;
+    max-width: 400px;
+    border-radius: 60px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+  }
+
+  #subtitulo{
+    font-family: "Montserrat";
+    font-size: 35px;
+    text-shadow: 0 0 15px red, 0 0 30px rgb(255, 72, 0), 0 0 50px rgb(233, 250, 4);
+  }
+.textogrande{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px;
+    margin-top: 10px;
+}
+
+.textogrande img{
+    width: 400px;
+    float: left;
+    margin: 10px 30px;
+}
+
+  #texto{
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: justify;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .imagen h3{
+    margin-top: 25px;
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .imagen img{
+    margin: 20px 300px;
+    width: 720px;
+  }

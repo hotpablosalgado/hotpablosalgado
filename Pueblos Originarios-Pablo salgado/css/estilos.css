@@ -1,0 +1,448 @@
+/* Definimos 2 variables de colores los cuales usaremos a lo largo del documento */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Rye&family=Silkscreen&family=Syncopate:wght@700&display=swap');
+:root {
+    --rojo: #e50914; 
+    --fondo: #141414; 
+}
+/* Agregamos un selector universal para decirle a css que todos los elementos de mi página tengan un margin de 0, un padding de 0 y un box-sizing de tipo border-box*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Accedemos al body y decimos que tenga el fondo de la variable --fondo (la cuál establecimos que almacena un color negro)*/
+body {
+    background: var(--fondo);
+    /* Ponemos que el tipo de fuente para el body sea la 'Open Sans' */
+    font-family: 'Open Sans', sans-serif;
+}
+/* Editamos el contenedor del header asignandole un ancho del 90% por ende 10% menos del total (5% menos de izquierda y derecha) y un margin auto para así crear los espaciados entre los elementos y el borde*/
+.contenedor {
+    width: 90%;
+    margin: auto;
+}
+/* ya teniendo los espaciados de izquierda y derecha usamos un 'padding' y le decimos q sea de 30px para generar ese espaciado vertical, como de los espacios horizontales no nos interesa lo dejamos en 0 */
+header {
+    padding: 30px 0;
+}
+/* Editamos el contenedor ya creado y le asignamos un display de tipo flex y un justify-content de tipo 'space-between' para poder poner el logo a la izquierda y menú a la derecha */
+header .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Accedemos al logo del header y le asiganmos la fuente ('Bebas Neue'), como el título ya estaba en negritas y la nueva fuente trae negritas también ponemos un font-weight normal, le asignamos un color rojo (el de la variable) y un tamaño de fuente de 40px */
+header .logotipo {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    color: var(--rojo);
+    font-size: 40px;
+}
+/* Accedemos a los enlaces que tenemos en el nav (menú de navegación) y le decimos que todos tengan un color gris casi blanco, con el text-decoration: none le quitamos los subrayados y ponemos un margen a la derecha de 20px entre cada uno de los elementos */
+header nav a {
+    color: #AAA;
+    text-decoration: none;
+    margin-right: 20px;
+}
+/* Accedemos al nav y decimos que cuando tenga su estado hover o cuándo tenga la clase 'active' cambie a un color completamente blanco */
+header nav a:hover,
+header nav a.active {
+    color: #e31e25;
+}
+
+.text{
+    max-width: 400PX;
+    display: flex;
+    margin: auto;
+}
+.text span{
+    font-size: 10pt;
+    font-weight: bold;
+    position: relative;
+    font-family: "Fredoka one";
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    
+}
+.text span::before{
+    content: var(--l);
+    position: absolute;
+    transform: scale(1.1);
+    filter:blur(15px);
+}
+.text span::after{
+    content: var(--l);
+    position:absolute;
+    top: 80%;
+    left: 0;
+    filter: blur(30px);
+    transform:rotateX(50deg);
+}
+.text span:hover{
+    filter:contrast(250%);
+}
+
+.text span:nth-child(1){
+    color: #feed01;
+}
+
+.text span:nth-child(2){
+    color: #ef6a01;
+}
+
+.text span:nth-child(3){
+    color: #e31e25;
+}
+
+.text span:nth-child(4){
+    color: #7d71b1;
+}
+
+.text span:nth-child(5){
+    color: #01a0e2;
+}
+
+.text span:nth-child(6){
+    color: #0d9543;
+}
+
+.text span:nth-child(7){
+    color: #fff;
+}
+
+.text span:nth-child(8){
+    color: #feed01;
+}
+
+.text span:nth-child(9){
+    color: #ef6a01;
+}
+
+.text span:nth-child(10){
+    color: #e31e25;
+}
+
+.text span:nth-child(11){
+    color: #7d71b1;
+}
+
+.text span:nth-child(12){
+    color: #01a0e2;
+}
+
+.text span:nth-child(13){
+    color: #0d9543;
+}
+
+.text span:nth-child(14){
+    color: #fff;
+}
+
+.text span:nth-child(15){
+    color: #feed01;
+}
+
+.text span:nth-child(16){
+    color: #ef6a01;
+}
+
+.text span:nth-child(17){
+    color: #e31e25;
+}
+
+.text span:nth-child(18){
+    color: #7d71b1;
+}
+
+.text span:nth-child(19){
+    color: #feed01;
+}
+
+.text span{
+    display: flex;
+    width: 500px;
+    justify-content: center;
+}
+
+
+.menu-horizontal{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .menu-horizontal > li > a{
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+  }
+  
+  .menu-vertical{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgba(0, 0, 0, .5);
+    color:#000;
+  }
+  
+  .menu-horizontal li:hover .menu-vertical{
+    display: block;
+  }
+  
+  .menu-vertical li:hover{
+    background-color: rgb(255, 255, 255);
+  }
+/* Película Principal*/
+
+/* Accedemos a la pelicula principal y le asignamos un font-size de 16px */
+.pelicula-principal {
+    font-size: 16px;
+    /* Para asegurarnos de modificar la imagen, el título y la descripción según el dispositivo utilizaremos medidas em y rem, así todo será proporcional y si se agranda o achica lo hará todo al mismo tiempo */
+    min-height: 40.62em;
+    /* Le ponemos un color blanco al texto */
+    color: #FFF;
+/* Le agregamos 2 fondos: el primero va a ser un degradado con 'linear-gradient' y el segundo va a ser la imagen que va a estar detrás del degradado */
+    background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0.50) 100%), url(../img/principal.jpg);
+    /* Centramos la imagen de forma tanto vertical como horizontal */
+    background-position: center center;
+    /* Utilizamos un background-size de tipo cover para que la imagen abarque el 100% disponible */
+    background-size: cover;
+    /* Le agregamos un margen de 3,12em (unos 50px) */
+    margin-bottom: 3.12em;
+    /* Para poder modificar los textos le añadimos un display de tipo flex */
+    display: flex;
+    /* Alineamos los textos al final */
+    align-items: end;
+}
+
+.pelicula-principal .contenedor {
+    /* Como el contenedor nos genera un margen vertical no deseado accedemos a el y le decimos que tenga un margen de 0px arriba y abajo y auto izquierda y derecha */
+    margin: 0 auto;
+    /* Como nos queda muy abajo el texto le agregamos un margen de 100px o 6.25em */ 
+    margin-bottom: 6.25em;
+}
+
+.pelicula-principal .titulo {
+    /* Le decimos que tenga un font-weight de tipo 600 (el que habíamos utilizado de googleFonts */
+    font-weight: 600;
+    /* Le ponemos un font-size de 50px o 3.12em */
+    font-size: 3.12em;
+    /* Al cambiar el font-size cambian las medidas así que los 20px del margin-bottom ahora son 0.4em (o.4 multiplicado por 50 que valen los 3.12em = 2opx) */
+    margin-bottom: 0.4em;
+}
+
+.pelicula-principal .descripcion {
+    /* le ponemos un font-weight de tipo normal */
+    font-weight: normal;
+    /* Un font-size de 1em = 16px */
+    font-size: 1em;
+    /* Un line-height de 28px = 1.75em el cuál sirve para el espaciado entre líneas del texto */
+    line-height: 1.75em;
+    /* Le ponemos un ancho máximo del 50% de la pantalla */
+    max-width: 50%;
+    /* y por último un margen en la parte de abajo de 1.25em = 20px ya que el font-size es de 1em el cuál vale 16px */
+    margin-bottom: 1.25em;
+}
+
+.pelicula-principal .boton {
+    /* Le asiganmos a los botones un color rgba para que así además de ser negro tenga transparencia */
+    background: rgba(0, 0, 0, 0.5);
+    /* Le quitamos los bordes */
+    border: none;
+    /* Le podemos un borde de 0.31em = 5px */
+    border-radius: 0.31em;
+    /* Le ponemos un padding de 0.93em = 15px arriba y 30px izquierda y derecha */
+    padding: 0.93em 1.87em;
+    /* Le ponemos un color blanco */
+    color: rgb(255, 255, 255);
+    /* Un margen a la derecha de 1.25em = 20px */
+    margin-right: 1.25em;
+    /* Un cursor de tipo pointer para que muestre que se puede clickear sobre el botón */
+    cursor: pointer;
+    /* Una transición para que cuándo pasen el cursor por el botón este cambie el color pero tenga un efecto de .3s con una función de tiempo ease para todas las propiedades */
+    transition: .3s ease all;
+    /* Le ponemos un font-size de 1.12em = 18px */
+    font-size: 1.12em;
+    text-decoration: none;
+}
+
+.pelicula-principal .boton:hover {
+    /* Le decimos que cuando esté en su estado hover cambie de color el fondo y el texto del botón */
+    background: #FFF;
+    color: #000;
+}
+
+.pelicula-principal .boton i{
+    /* Para separar el ícono del texto simplemente le agregamos un margen de 1.25em que son los 20px */
+    margin-right: 1.25em;
+}
+
+/* Contenedor Título y Controles*/
+.contenedor-titulo-controles {
+    /* Ponemos un display de tipo flex y un justify-conten de tipo space-between para acomodar el título a la izquierda y los indicadores a la derecha */
+display: flex; 
+justify-content: space-between;  
+/* Para que los indicadores queden en la parte de abajo de lo que es el título usamos un align-items de tipo end */
+align-items: end; 
+}
+
+.contenedor-titulo-controles h3{
+    /* Le ponemos un color blanco al título y un font-size de 30px */
+color: #FFF;
+font-size: 30px;
+}
+
+.contenedor-titulo-controles .indicadores button {
+    /* Accedemos a los indicadores y les damos un color blanco */
+    background: #FFF;
+    /* Un alto de 3px */
+    height: 3px;
+    /* Un ancho de 10px */
+    width: 10px;
+    /* Un cursor de tipo pointer para que el usuario cuándo pase el cursor sepa que le puede dar click */
+    cursor: pointer;
+    /* Le sacamos los bordes */
+    border: none;
+    /* Le ponemos un margen a la derecha de 2px */
+    margin-right: 2px;
+}
+/* Hacemos que cuándo el botón esté es su estado hover cambie a un color rojo y cuándo tenga la clase 'active' también tenga un color rojo */
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.active {
+    background: red;
+}
+
+
+/* Contenedor Principal y Flechas*/
+
+.peliculas-recomendadas {
+    /* Le cramos un margen en la parte de abajo de 70px */
+    margin-bottom: 70px;
+}
+
+.peliculas-recomendadas .contenedor-principal {
+    /* Le ponemos un display de tipo flex para así poner todos los elementos de forma horizontal, los centramos de forma vertcal con el align-items: center y le damos una posición relativa */
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+    /* Accedemos a las flechas, le ponemos un posicionamiento absoluto para que esté dentro de la película, le quitamos los bordes por defecto, le ponemos un fondo negro con una transparencia de 0.3, un font-size de 40px, una altura del 50% del contenedor, lo posicionamos de arriba a abajo con un calculo (50% del tamaño del contenedor - 25% del alto del botón) */
+    position: absolute;
+    border: none;
+    background:rgba(0, 0, 0, 0.3);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50% - 25%);
+/* Le ponemos un line-hight de 40px */
+    line-height: 40px;
+    /* Un ancho de 50px */
+    width: 50px;
+    /* Color blanco */
+    color: #FFF;
+    /* Cursor de tipo pointer */
+    cursor: pointer;
+    /* Un z-index de tipo 500 solo para asegurarnos de que la flecha quede encima de los elementos */
+    z-index: 500;
+    /* Una transición de .2s con una función de tiempo ease para todas las propiedades */
+    transition: .2s ease all;
+}
+/* Decimos que cuando las flechas estén en su estado hover se cambie a un color negro como antes pero con una transparencia de .9 (3 veces más q antes) */
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda:hover,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha:hover {
+background: rgba(0, 0, 0, .9);
+}
+/* Para ubicar la flecha izquierda decimos que de izquierda a derecha la posicione en 0 y lo mismo con la flecha derecha pero de derecha a izquierda */
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda {
+    left: 0;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+    right: 0;
+}
+
+/* Carousel*/
+.peliculas-recomendadas .contenedor-carousel {
+    /* Accedemos al contenedor del carousel y decimos que abarque el 100% del espacio disponible */
+    width: 100%;
+    /* Le ponemos un padding de arriba y abajo de 20px y 0px de izquierda y derecha */
+    padding: 20px 0;
+    /* Le ponemos un overflow tipo hidden para que todo lo que salga del 100% esté oculto */
+    overflow: hidden;
+    /* Utilizamos el scroll-behavior para controlar el "Desplazamiento de la página" y así generar un movimiento agradable en el carousel al movernos en él */
+    scroll-behavior: smooth;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel {
+    /* Ponemos un display de tipo flex y así las películas ya se acomodan de forma horizontal */
+    display: flex;
+    /* ponemos un flex-wrap de tipo nowrap para asegurarnos que las imagenes queden una al lado de la otra*/
+    flex-wrap: nowrap;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula {
+    /* Le decimos que cada película abarque el 20% del espacio total (100%) para que así entren 5 películas*/
+    min-width: 20%;
+    /* Le ponemos una transición de .3s para una función ease para todas las propiedades*/
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula.hover {
+    /* Le decimos que la película se expanda desde el centro, 1.2 veces su tamaño*/
+    transform: scale(1.2);
+    transform-origin: center;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
+    /* Le ponemos un ancho del 100% del contenedor película*/
+    width: 100%;
+    /* Le ponemos un vertical-align de tipo top para quitar un pequeño margen que agregan los navegadores*/
+    vertical-align: top;
+}
+
+
+/* Media Queries*/
+/* Le agregamos un media querie y le decimos que se ejecute en la pantalla para un tamaño max-width de 800px */
+@media screen and (max-width: 800px) {
+    /* Accedemos al logo dentro del header y decimos que tenga un margen de 10px y como nos parece grande el logo lo achicamos a un font-size de 30px*/
+    header .logotipo {
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+
+    header .contenedor {
+        /* Cambiamos el flex a un flex-direction de tipo column y así cambiamos la orientación de tipo horizontal a vertical */
+        flex-direction: column;
+        /* y para asegurarnos que todos los textos estén centrados añadimos un text-align de tipo center */
+        text-align: center;
+    }
+
+    .pelicula-principal {
+        /* Como toda la parte de la película principal nos parece grande simplemente cambiamos el font-size de 16px a 14px, como trabajamos con medidas como em se ve afectado todo */
+        font-size: 14px;
+    }
+
+    .pelicula-principal .descripcion {
+        /* Para que el texto abarque más espacio simplemente le cambiamos el max-width que estaba en 50% a un 100% */
+        max-width: 100%;
+    }
+
+    .peliculas-recomendadas .contenedor-carousel {
+        overflow: visible;
+    }
+    .peliculas-recomendadas .contenedor-carousel .carousel {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .peliculas-recomendadas .indicadores,
+    .peliculas-recomendadas .flecha-izquierda,
+    .peliculas-recomendadas .flecha-derecha {
+        display: none;
+    }
+}
